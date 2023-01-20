@@ -1,4 +1,4 @@
-package javatopic;
+package midexam;
 import java.util.Scanner;
 import java.text.DecimalFormat;
 public class number2{

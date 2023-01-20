@@ -1,4 +1,4 @@
-package tw.recursive;
+package week14;
 
 public class RedBlackTree {
     class Node {
@@ -15,8 +15,8 @@ public class RedBlackTree {
             this.parent = parent;
         }
     }
-    private static final boolean RED = true;
-    private static final boolean BLACK = false;
+    private static  boolean RED = true;
+    private static  boolean BLACK = false;
     private Node root;
     
     private boolean isRed(Node x) {

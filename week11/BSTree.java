@@ -1,4 +1,4 @@
-package tw.recursive;
+package week11;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -23,6 +23,10 @@ public class BSTree {      // 二元搜尋樹類別
    public TreeNode head;   // 參考樹的根節點
    // 建立空的二元搜尋樹
    public BSTree() { head = null; }
+
+    public BSTree(TreeNode head) {
+        this.head = head;
+    }
  
    // 方法: 檢查二元搜尋樹是否是空的
    boolean isBSTreeEmpty() {
@@ -54,6 +58,37 @@ public class BSTree {      // 二元搜尋樹類別
          }
       }
    }
+      public TreeNode delete(TreeNode node ,int key) {
+      if (node == null) {
+         return node;
+      }
+      if(key<node.data){
+         node.left = delete(node.left, key);
+
+      }
+      else if (key > node.data) {
+         node.right = delete(node.right, key);
+     }
+     else {
+         if (node.left == null) {
+             return node.right;
+         }
+         else if (node.right == null) {
+             return node.left;
+         }
+         node.data = minValue(node.right);
+         node.right = delete(node.right, node.data);
+     }
+     return node;
+   }
+   private int minValue(TreeNode root) {
+      int minv = root.data;
+      while (root.left != null) {
+          minv = root.left.data;
+          root = root.left;
+      }
+      return minv;
+  }
    // 方法: 顯示二元搜尋樹的節點資料
    public void printBSTree() {
       inOrder(this.head);
@@ -114,5 +149,10 @@ public class BSTree {      // 二元搜尋樹類別
          System.out.print("PostOrder:");
          obj.postOrder(obj.head);
          System.out.println();
+         obj.postOrder(obj.head);
+         System.out.println();
+         obj.delete(obj.head, 8);
+         System.out.println();
+         obj.printBSTree();
    }
 }

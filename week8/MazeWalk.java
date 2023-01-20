@@ -1,4 +1,4 @@
-package tw.recursive;
+package week8;
 
 
 public class MazeWalk {
