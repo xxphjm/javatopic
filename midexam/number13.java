@@ -1,4 +1,4 @@
-package javatopic;
+package midexam;
 import java.util.*;
 public class number13 {
     public static void main(String[] args) {

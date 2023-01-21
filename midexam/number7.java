@@ -1,4 +1,4 @@
-package javatopic;
+package midexam;
 import java.util.Scanner;
 
 public class number7{

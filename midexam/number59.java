@@ -1,4 +1,4 @@
-package javatopic;
+package midexam;
 import java.util.*;
 import java.lang.Math;
 public class number59 {
